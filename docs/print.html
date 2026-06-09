@@ -36,10 +36,10 @@
             const path_to_root = "";
             const default_light_theme = "light";
             const default_dark_theme = "navy";
-            window.path_to_searchindex_js = "searchindex-82b9fa2b.js";
+            window.path_to_searchindex_js = "searchindex-54b81178.js";
         </script>
         <!-- Start loading toc.js asap -->
-        <script src="toc-6cbda905.js"></script>
+        <script src="toc-3762fe35.js"></script>
     </head>
     <body>
     <div id="mdbook-help-container">
@@ -270,7 +270,7 @@ SigLevel = Optional TrustAll
 <h1 id="quickstart"><a class="header" href="#quickstart">Quickstart</a></h1>
 <div style="break-before: page; page-break-before: always;"></div>
 <h1 id="input"><a class="header" href="#input">Input</a></h1>
-<p>This page describes the behaviour of and notation used for keyboard and mouse inputs in Stenci3.</p>
+<p>This page describes the behaviour of and notation used for keyboard and mouse inputs in Stencil3.</p>
 <h2 id="keyboard"><a class="header" href="#keyboard">Keyboard</a></h2>
 <ul>
 <li><code>X</code>: one key</li>
@@ -294,30 +294,28 @@ SigLevel = Optional TrustAll
 </ul>
 <div style="break-before: page; page-break-before: always;"></div>
 <h1 id="layout"><a class="header" href="#layout">Layout</a></h1>
-<p>TODO image here</p>
+<p><img src="layout.png" alt="layout"></p>
 <ol>
-<li>The <strong>menu bar</strong> contains menu items in the order of Information, File, Edit, View, as well as a status message.</li>
-</ol>
+<li>The <strong>menu bar</strong> contains menu items in the order of Information, File, Edit, View, as well as a status message.
 <ul>
-<li>The Informatiom category contains windows to show information about Stencil3 as well as settings and an option to quit.</li>
+<li>The Information category contains windows to show information about Stencil3 as well as settings and an option to quit.</li>
 <li>The File category contains functionality for manipulating projects and namespaces.</li>
 <li>The Edit category contains functionality for manipulating components.</li>
 <li>The View category contains options to open windows or move the tilemap.</li>
 <li>The status message shows help and/or status information about your current mode or recently done action.</li>
 </ul>
-<ol start="2">
+</li>
 <li>The average <strong>milliseconds per frame</strong> is shown here. On a good computer, this should be under 16.7ms/frame (60fps).</li>
-<li>The <strong>tilemaap</strong> takes up most of the window and is your primary work area.</li>
-<li>The <strong>toolbar</strong> lets you switch between modes.</li>
-</ol>
+<li>The <strong>tilemap</strong> takes up most of the window and is your primary work area.</li>
+<li>The <strong>toolbar</strong> lets you switch between modes.
 <ul>
-<li>Select Mode allows selecting of compoments.</li>
+<li>Select Mode allows selecting of components.</li>
 <li>Nodes Mode allows selecting of nodes.</li>
 <li>There are 3 Create Modes for point, line and area. It will also show options for the namespace new components will be under as well as its skin type.</li>
 <li>If the current project is not attached to any folder on disk, “NOT SAVED” will show here.</li>
 </ul>
-<ol start="5">
-<li>The X and Z coordinte of your mouse cursor as well as your current zoom and an option to reset the map view.</li>
+</li>
+<li>The X and Z coordinate of your mouse cursor as well as your current zoom and an option to reset the map view.</li>
 <li>The <strong>Component Editor</strong> lets you edit the component data. It also shows the coordinates of the nodes of the component.</li>
 <li>The <strong>Project Editor</strong> lets you configure the project’s skin, basemap and namespaces. It also contains a list of components where you can select them, move them into view and delete them.</li>
 <li>The <strong>History Viewer</strong> shows your project history.</li>
@@ -339,9 +337,9 @@ SigLevel = Optional TrustAll
 <h1 id="select-mode"><a class="header" href="#select-mode">Select Mode</a></h1>
 <p>The Select Mode allows selecting of components.</p>
 <h2 id="selecting"><a class="header" href="#selecting">Selecting</a></h2>
-<p>To select a component, <code>L-Click</code> it. Shift+L-click to select multiple components. If you have multiple components, <code>Shift+L-Click</code>ing selected components also deselects them one by one.</p>
+<p>To select a component, <code>L-Click</code> it. <code>Shift+L-click</code> to select multiple components. If you have multiple components, <code>Shift+L-Click</code>ing selected components also deselects them one by one.</p>
 <p>Select a point by clicking within its hitbox. Select a line by clicking near its outline.</p>
-<p>For areas, zooming in will reveal a transparent body which is not selectable. This is so that other components within the footprint of this area are selectable. If so, the selectable area is instead the opaque area around the edges.</p>
+<p>For areas, zooming in will reveal a transparent body which is not selectable. This is so that other components within the footprint of this area are selectable. The selectable area is instead the opaque area around the edges.</p>
 <p>After selecting, the <a href="Component-Editor.html">Component Editor</a> will show information about the selected components.</p>
 <h3 id="marquee-select"><a class="header" href="#marquee-select">Marquee Select</a></h3>
 <p><code>L-Click</code>ing and dragging will show a dashed box. When the mouse is released, any components fully within this box will be selected. You can also <code>Shift+L-Click</code> and drag to add to the existing selection.</p>
@@ -441,11 +439,7 @@ SigLevel = Optional TrustAll
 <h3 id="to-pla2jsonpla2msgpack"><a class="header" href="#to-pla2jsonpla2msgpack">To pla2.json/pla2.msgpack</a></h3>
 <p>The older pla2 format stores all components of the same namespace in one file, and is generally in MessagePack format (although JSON is fully supported too).</p>
 <div style="break-before: page; page-break-before: always;"></div>
-<h1 id="project-toml"><a class="header" href="#project-toml">Project TOML</a></h1>
-<div style="break-before: page; page-break-before: always;"></div>
-<h1 id="directories"><a class="header" href="#directories">Directories</a></h1>
-<div style="break-before: page; page-break-before: always;"></div>
-<h1 id="environment-variables"><a class="header" href="#environment-variables">Environment Variables</a></h1>
+<h1 id="settings"><a href="#settings" class="header">Settings</a></h1>
 <div style="break-before: page; page-break-before: always;"></div>
 <h1 id="map"><a class="header" href="#map">Map</a></h1>
 <div style="break-before: page; page-break-before: always;"></div>
@@ -454,6 +448,12 @@ SigLevel = Optional TrustAll
 <h1 id="shortcut"><a class="header" href="#shortcut">Shortcut</a></h1>
 <div style="break-before: page; page-break-before: always;"></div>
 <h1 id="miscellaneous"><a class="header" href="#miscellaneous">Miscellaneous</a></h1>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="project-toml"><a class="header" href="#project-toml">Project TOML</a></h1>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="directories"><a class="header" href="#directories">Directories</a></h1>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="environment-variables"><a class="header" href="#environment-variables">Environment Variables</a></h1>
 <div style="break-before: page; page-break-before: always;"></div>
 <h1 id="welcome-to-stencil2s-manual"><a class="header" href="#welcome-to-stencil2s-manual">Welcome to Stencil2’s manual!</a></h1>
 <p><em>Last updated for: v2.2.0</em></p>
