@@ -35,10 +35,10 @@
             const path_to_root = "";
             const default_light_theme = "light";
             const default_dark_theme = "navy";
-            window.path_to_searchindex_js = "searchindex-6f9487ed.js";
+            window.path_to_searchindex_js = "searchindex-ae80bcff.js";
         </script>
         <!-- Start loading toc.js asap -->
-        <script src="toc-3ca70670.js"></script>
+        <script src="toc-d64e41d2.js"></script>
     </head>
     <body>
     <div id="mdbook-help-container">
@@ -175,12 +175,26 @@
                 <div id="mdbook-content" class="content">
                     <main>
                         <h1 id="select-mode"><a class="header" href="#select-mode">Select Mode</a></h1>
+<p>The Select Mode allows selecting of components.</p>
+<h2 id="selecting"><a class="header" href="#selecting">Selecting</a></h2>
+<p>To select a component, <code>L-Click</code> it. Shift+L-click to select multiple components. If you have multiple components, <code>Shift+L-Click</code>ing selected components also deselects them one by one.</p>
+<p>Select a point by clicking within its hitbox. Select a line by clicking near its outline.</p>
+<p>For areas, zooming in will reveal a transparent body which is not selectable. This is so that other components within the footprint of this area are selectable. If so, the selectable area is instead the opaque area around the edges.</p>
+<p>After selecting, the <a href="Component-Editor.html">Component Editor</a> will show information about the selected components.</p>
+<h3 id="marquee-select"><a class="header" href="#marquee-select">Marquee Select</a></h3>
+<p><code>L-Click</code>ing and dragging will show a dashed box. When the mouse is released, any components fully within this box will be selected. You can also <code>Shift+L-Click</code> and drag to add to the existing selection.</p>
+<h2 id="clipboard"><a class="header" href="#clipboard">Clipboard</a></h2>
+<p><code>Ctrl+C</code> to copy and <code>Ctrl+X</code> to cut the selected components, and <code>Ctrl+V</code> to paste them. Note that components will be pasted into the namespace where the last component was created in.</p>
+<h2 id="deleting"><a class="header" href="#deleting">Deleting</a></h2>
+<p><code>Delete</code> to delete the selected components.</p>
+<h2 id="context-menu"><a class="header" href="#context-menu">Context Menu</a></h2>
+<p><code>R-Click</code> a component to view its context menu where you can copy, cut, paste and delete the component using your mouse.</p>
 
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
-                            <a rel="prev" href="Layout.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                            <a rel="prev" href="Tilemap.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                                 <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256 246.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg></span>
                             </a>
 
@@ -194,7 +208,7 @@
             </div>
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
-                    <a rel="prev" href="Layout.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                    <a rel="prev" href="Tilemap.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                         <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256 246.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg></span>
                     </a>
 

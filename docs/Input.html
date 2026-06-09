@@ -3,7 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>Basics - Stencil3 Manual</title>
+        <title>Input - Stencil3 Manual</title>
 
 
         <!-- Custom HTML head -->
@@ -12,33 +12,33 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="theme-color" content="#ffffff">
 
-        <link rel="icon" href="../favicon-de23e50b.svg">
-        <link rel="shortcut icon" href="../favicon-8114d1fc.png">
-        <link rel="stylesheet" href="../css/variables-8adf115d.css">
-        <link rel="stylesheet" href="../css/general-0392ca55.css">
-        <link rel="stylesheet" href="../css/chrome-fc474251.css">
-        <link rel="stylesheet" href="../css/print-9e4910d8.css" media="print">
+        <link rel="icon" href="favicon-de23e50b.svg">
+        <link rel="shortcut icon" href="favicon-8114d1fc.png">
+        <link rel="stylesheet" href="css/variables-8adf115d.css">
+        <link rel="stylesheet" href="css/general-0392ca55.css">
+        <link rel="stylesheet" href="css/chrome-fc474251.css">
+        <link rel="stylesheet" href="css/print-9e4910d8.css" media="print">
 
         <!-- Fonts -->
-        <link rel="stylesheet" href="../fonts/fonts-9644e21d.css">
+        <link rel="stylesheet" href="fonts/fonts-9644e21d.css">
 
         <!-- Highlight.js Stylesheets -->
-        <link rel="stylesheet" id="mdbook-highlight-css" href="../highlight-493f70e1.css">
-        <link rel="stylesheet" id="mdbook-tomorrow-night-css" href="../tomorrow-night-4c0ae647.css">
-        <link rel="stylesheet" id="mdbook-ayu-highlight-css" href="../ayu-highlight-3fdfc3ac.css">
+        <link rel="stylesheet" id="mdbook-highlight-css" href="highlight-493f70e1.css">
+        <link rel="stylesheet" id="mdbook-tomorrow-night-css" href="tomorrow-night-4c0ae647.css">
+        <link rel="stylesheet" id="mdbook-ayu-highlight-css" href="ayu-highlight-3fdfc3ac.css">
 
         <!-- Custom theme stylesheets -->
 
 
         <!-- Provide site root and default themes to javascript -->
         <script>
-            const path_to_root = "../";
+            const path_to_root = "";
             const default_light_theme = "light";
             const default_dark_theme = "navy";
-            window.path_to_searchindex_js = "../searchindex-ae80bcff.js";
+            window.path_to_searchindex_js = "searchindex-ae80bcff.js";
         </script>
         <!-- Start loading toc.js asap -->
-        <script src="../toc-d64e41d2.js"></script>
+        <script src="toc-d64e41d2.js"></script>
     </head>
     <body>
     <div id="mdbook-help-container">
@@ -105,7 +105,7 @@
             <!-- populated by js -->
             <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
             <noscript>
-                <iframe class="sidebar-iframe-outer" src="../toc.html"></iframe>
+                <iframe class="sidebar-iframe-outer" src="toc.html"></iframe>
             </noscript>
             <div id="mdbook-sidebar-resize-handle" class="sidebar-resize-handle">
                 <div class="sidebar-resize-indicator"></div>
@@ -140,7 +140,7 @@
                     <h1 class="menu-title">Stencil3 Manual</h1>
 
                     <div class="right-buttons">
-                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
                             <span class=fa-svg id="print-button"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M128 0C92.7 0 64 28.7 64 64v96h64V64H354.7L384 93.3V160h64V93.3c0-17-6.7-33.3-18.7-45.3L400 18.7C388 6.7 371.7 0 354.7 0H128zM384 352v32 64H128V384 368 352H384zm64 32h32c17.7 0 32-14.3 32-32V256c0-35.3-28.7-64-64-64H64c-35.3 0-64 28.7-64 64v96c0 17.7 14.3 32 32 32H64v64c0 35.3 28.7 64 64 64H384c35.3 0 64-28.7 64-64V384zm-16-88c-13.3 0-24-10.7-24-24s10.7-24 24-24s24 10.7 24 24s-10.7 24-24 24z"/></svg></span>
                         </a>
 
@@ -174,135 +174,39 @@
 
                 <div id="mdbook-content" class="content">
                     <main>
-                        <h1 id="layout"><a class="header" href="#layout">Layout</a></h1>
-<p><img src="https://raw.githubusercontent.com/MRT-Map/stencil2/v2/.github/wiki/stencil.png" alt=""></p>
-<h1 id="loading-a-project"><a class="header" href="#loading-a-project">Loading a Project</a></h1>
+                        <h1 id="input"><a class="header" href="#input">Input</a></h1>
+<p>This page describes the behaviour of and notation used for keyboard and mouse inputs in Stenci3.</p>
+<h2 id="keyboard"><a class="header" href="#keyboard">Keyboard</a></h2>
 <ul>
-<li>Under <code>Project</code> on the right panel, click <code>Open</code> and select a folder with PLA files in it (or a new folder)</li>
-<li>A list of namespaces will be loaded along with the default namespace <code>_misc</code></li>
-</ul>
-<h1 id="namespace-creation"><a class="header" href="#namespace-creation">Namespace Creation</a></h1>
+<li><code>X</code>: one key</li>
+<li><code>Modifier+X</code>: hold down <code>Modifier</code> while pressing the key
 <ul>
-<li>Under <code>Project</code> on the right panel, input the namespace’s name and click <code>+</code></li>
-<li>Remember to do this before adding anything to the namespace, in case you forget (it does not have a way to mass-move components between namespaces yet)</li>
-</ul>
-<h1 id="component-creation"><a class="header" href="#component-creation">Component Creation</a></h1>
-<h2 id="points"><a class="header" href="#points">Points</a></h2>
-<ul>
-<li>Click <code>Point</code> on the toolbar or press <code>4</code> on the keyboard</li>
-<li>Left-click on the map where you want your point to be</li>
-</ul>
-<h2 id="lines-and-areas"><a class="header" href="#lines-and-areas">Lines and Areas</a></h2>
-<ul>
-<li>Click <code>Line</code> on the toolbar or press <code>5</code> on the keyboard for lines; or</li>
-<li>Click <code>Area</code> on the toolbar or press <code>6</code> on the keyboard for areas</li>
-<li>Left-click on the map where you want the line/area to start. This is your first node</li>
-<li>Continue left-clicking to place more nodes and continue the line/area
-<ul>
-<li>Hold down the left <code>alt</code> key for angle-snapping</li>
-</ul>
-</li>
-<li>If you had made a mistake with the previous node, left-click on the previous node to remove it</li>
-<li>Right-click to complete the line/area at the last node placed
-<ul>
-<li>For areas, left-clicking on the first node completes it too</li>
+<li><code>Ctrl</code> is the control key on Windows and Linux and the command key on macOS</li>
+<li><code>Alt</code> is the alt key on Windows and Linux and the option key on macOS</li>
+<li><code>Shift</code> is the shift key</li>
 </ul>
 </li>
 </ul>
-<h1 id="component-editing"><a class="header" href="#component-editing">Component Editing</a></h1>
+<h2 id="mouse"><a class="header" href="#mouse">Mouse</a></h2>
 <ul>
-<li>Click <code>Select</code> on the toolbar or <code>1</code> on the keyboard, then left-click the component you want to edit</li>
-</ul>
-<h2 id="editing-component-information"><a class="header" href="#editing-component-information">Editing Component Information</a></h2>
+<li><code>L-Click</code>, <code>M-Click</code> and <code>R-Click</code> refer to the left, middle and right mouse buttons
 <ul>
-<li>A panel of text boxes and sliders should appear on the left of the screen
-<ul>
-<li><code>ns.</code> is the namespace that the component belongs to. It should be a three-letter code that your project organisers have assigned, or that you have registered
-<ul>
-<li>If you have just created a namespace, remember to set it (before)</li>
-<li>This field should be automatically prefilled the next time you edit a component’s information</li>
+<li>If you do not have access to a middle mouse button, <code>Alt+L-Click</code> is the substitute for <code>M-Click</code></li>
 </ul>
 </li>
-<li><code>id</code> should be prefilled automatically with a randomly-generated ID</li>
-<li><code>Displayed as</code> is the text that would appear on the final map</li>
-<li><code>Description</code> is a brief description of the component</li>
-<li><code>Component type</code> is what the component would show up as on the final map</li>
-<li><code>Tags</code> is a comma-separated list of tags on the component
-<ul>
-<li>e.g. <code>oneWay</code> makes a line one-directional</li>
-</ul>
-</li>
-<li><code>Layer</code> controls whether the component appears below or above other components</li>
-<li>In lines, <code>Reverse direction</code> reverses the order of the nodes. This is useful for one-directional components</li>
-<li>A list of coordinates is shown as well below the information fields
-<ul>
-<li>In lines, the green coordinate points to the start of the line and the red coordinate points to the end of the line. Both these coloured coordinates point to coloured handles on the component on the tilemap</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<h2 id="moving-components"><a class="header" href="#moving-components">Moving Components</a></h2>
-<ul>
-<li>Right-click and drag the component to move it</li>
-</ul>
-<h2 id="editing-individual-nodes"><a class="header" href="#editing-individual-nodes">Editing Individual Nodes</a></h2>
-<ul>
-<li>Click <code>Edit Nodes</code> on the toolbar or <code>2</code> on the keyboard</li>
-<li>For the large circles:
-<ul>
-<li>right-click and drag to move the node</li>
-<li>right-click without dragging to delete the node</li>
-</ul>
-</li>
-<li>For the small circles:
-<ul>
-<li>right-click to create a node</li>
-</ul>
-</li>
-</ul>
-<h2 id="deleting-components"><a class="header" href="#deleting-components">Deleting Components</a></h2>
-<ul>
-<li>Click <code>Delete</code> on the toolbar or <code>3</code> on the keyboard</li>
-<li>Left-click a component to delete it</li>
-</ul>
-<h2 id="undo--redo"><a class="header" href="#undo--redo">Undo &amp; Redo</a></h2>
-<ul>
-<li>Click <code>Edit &gt; Undo</code> on the menu, <code>u</code> on the keyboard, or <code>Undo</code> under <code>History</code> on the right panel to undo</li>
-<li>Click <code>Edit &gt; Redo</code> on the menu, <code>y</code> on the keyboard, or <code>Redo</code> under <code>History</code> on the right panel to undo</li>
-</ul>
-<h1 id="view-all-components"><a class="header" href="#view-all-components">View All Components</a></h1>
-<ul>
-<li>You can do this under <code>Component List</code> on the right panel</li>
-<li>Click <code>Move to</code> next to a component in the list to shift the viewport to the first node of the component</li>
-</ul>
-<h1 id="saving-the-project"><a class="header" href="#saving-the-project">Saving the project</a></h1>
-<ul>
-<li>Under <code>Project</code> on the right panel, Click <code>Save</code></li>
-<li>There is also an autosave every 1 minute</li>
-</ul>
-<h1 id="deleting-a-namespace"><a class="header" href="#deleting-a-namespace">Deleting a namespace</a></h1>
-<ul>
-<li>Under <code>Project</code> on the right panel, hide the namespace and then click <code>X</code>
-<ul>
-<li>Namespaces can only be removed when it has no components</li>
-</ul>
-</li>
-</ul>
-<h1 id="quitting"><a class="header" href="#quitting">Quitting</a></h1>
-<ul>
-<li>Click <code>Stencil v(version) &gt; Quit</code> on the menu or <code>esc</code> on the keyboard to quit</li>
+<li><code>Dbl-X-Click</code> refers to double-clicking a mouse button.</li>
+<li><code>Scroll</code> refers to scrolling with the mouse wheel. This mostly refers to vertical scrolling, but horizontal scrolling is possible with mice that support it.</li>
 </ul>
 
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
-                            <a rel="prev" href="../v2/Stencil2-Home.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                            <a rel="prev" href="Quickstart.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                                 <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256 246.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg></span>
                             </a>
 
-                            <a rel="next prefetch" href="../v2/Stencil2-Advanced-Topics.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                            <a rel="next prefetch" href="Layout.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                                 <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"/></svg></span>
                             </a>
 
@@ -312,11 +216,11 @@
             </div>
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
-                    <a rel="prev" href="../v2/Stencil2-Home.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                    <a rel="prev" href="Quickstart.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                         <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256 246.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg></span>
                     </a>
 
-                    <a rel="next prefetch" href="../v2/Stencil2-Advanced-Topics.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                    <a rel="next prefetch" href="Layout.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                         <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"/></svg></span>
                     </a>
             </nav>
@@ -336,13 +240,13 @@
         </script>
 
 
-        <script src="../elasticlunr-ef4e11c1.min.js"></script>
-        <script src="../mark-09e88c2c.min.js"></script>
-        <script src="../searcher-09f2665d.js"></script>
+        <script src="elasticlunr-ef4e11c1.min.js"></script>
+        <script src="mark-09e88c2c.min.js"></script>
+        <script src="searcher-09f2665d.js"></script>
 
-        <script src="../clipboard-1626706a.min.js"></script>
-        <script src="../highlight-abc7f01d.js"></script>
-        <script src="../book-c22b7243.js"></script>
+        <script src="clipboard-1626706a.min.js"></script>
+        <script src="highlight-abc7f01d.js"></script>
+        <script src="book-c22b7243.js"></script>
 
         <!-- Custom JS scripts -->
 

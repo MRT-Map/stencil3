@@ -36,10 +36,10 @@
             const path_to_root = "";
             const default_light_theme = "light";
             const default_dark_theme = "navy";
-            window.path_to_searchindex_js = "searchindex-6f9487ed.js";
+            window.path_to_searchindex_js = "searchindex-ae80bcff.js";
         </script>
         <!-- Start loading toc.js asap -->
-        <script src="toc-3ca70670.js"></script>
+        <script src="toc-d64e41d2.js"></script>
     </head>
     <body>
     <div id="mdbook-help-container">
@@ -269,6 +269,30 @@ SigLevel = Optional TrustAll
 <div style="break-before: page; page-break-before: always;"></div>
 <h1 id="quickstart"><a class="header" href="#quickstart">Quickstart</a></h1>
 <div style="break-before: page; page-break-before: always;"></div>
+<h1 id="input"><a class="header" href="#input">Input</a></h1>
+<p>This page describes the behaviour of and notation used for keyboard and mouse inputs in Stenci3.</p>
+<h2 id="keyboard"><a class="header" href="#keyboard">Keyboard</a></h2>
+<ul>
+<li><code>X</code>: one key</li>
+<li><code>Modifier+X</code>: hold down <code>Modifier</code> while pressing the key
+<ul>
+<li><code>Ctrl</code> is the control key on Windows and Linux and the command key on macOS</li>
+<li><code>Alt</code> is the alt key on Windows and Linux and the option key on macOS</li>
+<li><code>Shift</code> is the shift key</li>
+</ul>
+</li>
+</ul>
+<h2 id="mouse"><a class="header" href="#mouse">Mouse</a></h2>
+<ul>
+<li><code>L-Click</code>, <code>M-Click</code> and <code>R-Click</code> refer to the left, middle and right mouse buttons
+<ul>
+<li>If you do not have access to a middle mouse button, <code>Alt+L-Click</code> is the substitute for <code>M-Click</code></li>
+</ul>
+</li>
+<li><code>Dbl-X-Click</code> refers to double-clicking a mouse button.</li>
+<li><code>Scroll</code> refers to scrolling with the mouse wheel. This mostly refers to vertical scrolling, but horizontal scrolling is possible with mice that support it.</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div>
 <h1 id="layout"><a class="header" href="#layout">Layout</a></h1>
 <p>TODO image here</p>
 <ol>
@@ -300,19 +324,108 @@ SigLevel = Optional TrustAll
 <li>You may find notifications showing up here. These are usually related to projects or namespaces. Any errors or warnings will also show here.</li>
 </ol>
 <div style="break-before: page; page-break-before: always;"></div>
+<h1 id="tilemap"><a class="header" href="#tilemap">Tilemap</a></h1>
+<p>The Tilemap is on the centre of the window by default. It automatically loads the basemap specified in the project configuration to the screen such that components can be plotted over it.</p>
+<h2 id="panning"><a class="header" href="#panning">Panning</a></h2>
+<p><code>M-click</code> and drag to move the map. You can also use arrow keys.</p>
+<p>With the scroll wheel, <code>Scroll</code> to pan vertically, and <code>Shift+Scroll</code> to pan horizontally. The directions can be inverted in the settings.</p>
+<p>On a supported trackpad, drag with two fingers.</p>
+<h2 id="zooming"><a class="header" href="#zooming">Zooming</a></h2>
+<p><code>Ctrl+Scroll</code> to zoom. You can also use <code>Alt+Plus</code> and <code>Alt+Minus</code>. <strong>Note that <code>Ctrl+Plus/Minus</code> doesn’t work and zooms the UI instead. This is an <code>eframe</code> feature which I have no clue how to disable.</strong></p>
+<p>On a supported trackpad, pinch with two fingers.</p>
+<h2 id="reset-view"><a class="header" href="#reset-view">Reset View</a></h2>
+<p>Press <code>Alt+0</code> to reset the view to the default position and zoom. You can do the same with the button on the top-right.</p>
+<div style="break-before: page; page-break-before: always;"></div>
 <h1 id="select-mode"><a class="header" href="#select-mode">Select Mode</a></h1>
+<p>The Select Mode allows selecting of components.</p>
+<h2 id="selecting"><a class="header" href="#selecting">Selecting</a></h2>
+<p>To select a component, <code>L-Click</code> it. Shift+L-click to select multiple components. If you have multiple components, <code>Shift+L-Click</code>ing selected components also deselects them one by one.</p>
+<p>Select a point by clicking within its hitbox. Select a line by clicking near its outline.</p>
+<p>For areas, zooming in will reveal a transparent body which is not selectable. This is so that other components within the footprint of this area are selectable. If so, the selectable area is instead the opaque area around the edges.</p>
+<p>After selecting, the <a href="Component-Editor.html">Component Editor</a> will show information about the selected components.</p>
+<h3 id="marquee-select"><a class="header" href="#marquee-select">Marquee Select</a></h3>
+<p><code>L-Click</code>ing and dragging will show a dashed box. When the mouse is released, any components fully within this box will be selected. You can also <code>Shift+L-Click</code> and drag to add to the existing selection.</p>
+<h2 id="clipboard"><a class="header" href="#clipboard">Clipboard</a></h2>
+<p><code>Ctrl+C</code> to copy and <code>Ctrl+X</code> to cut the selected components, and <code>Ctrl+V</code> to paste them. Note that components will be pasted into the namespace where the last component was created in.</p>
+<h2 id="deleting"><a class="header" href="#deleting">Deleting</a></h2>
+<p><code>Delete</code> to delete the selected components.</p>
+<h2 id="context-menu"><a class="header" href="#context-menu">Context Menu</a></h2>
+<p><code>R-Click</code> a component to view its context menu where you can copy, cut, paste and delete the component using your mouse.</p>
 <div style="break-before: page; page-break-before: always;"></div>
 <h1 id="component-editing"><a class="header" href="#component-editing">Component Editing</a></h1>
+<p>The Component Editor is on the left of the window by default.</p>
+<p>When no components are selected, it shows the number of components in your clipboard.</p>
+<h2 id="information"><a class="header" href="#information">Information</a></h2>
+<p>Below is the information that will be shown. Note that some fields are only editable when only one component is selected, or if all values are the same.</p>
+<ul>
+<li>The namespace the components are under. To create new namespaces, see the <a href="Project-Editor.html">Project Editor</a>.</li>
+<li>The ID of the components. This is typically randomly-generated and not editable.</li>
+<li>The display name of the components. This will show on the rendered map.</li>
+<li>The layer of the components.</li>
+<li>The skin type of the components.</li>
+<li>A list of attributes. This will be serialised into TOML inside the PLA3 file.
+<ul>
+<li>The Description and Tags fields from PLA2 show up here. Description can be stored as a string in the top level. Each tag can be stored as a True boolean in the top level.
+<ul>
+<li>For example, the <code>oneWay</code> tag from PLA2 shows up as <code>oneWay = true</code> in the attributes table of PLA3.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>The list of nodes the component has. This shows both ending coordinate and Bézier control points.
+<ul>
+<li>A simple line to a coordinate shows a simple <code>coord</code> entry.</li>
+<li>A quadratic curve shows <code>ctrl</code> and <code>coord</code>.</li>
+<li>A cubic curve shows <code>ctrl1</code>, <code>ctrl2</code> and <code>coord</code>.</li>
+<li>Labels are also shown. This is a future feature to prevent components with nodes on the same coordinate from joining together, and is useful for roads at different levels. Functionality to edit the label will be implemented in the future.</li>
+<li>If the component is a line, there is also a button to reverse the node order.</li>
+</ul>
+</li>
+</ul>
 <div style="break-before: page; page-break-before: always;"></div>
 <h1 id="create-mode"><a class="header" href="#create-mode">Create Mode</a></h1>
+<p>The Create Modes allow creating of components.</p>
+<p>Before creating any components, you will need to select a namespace to create components under as well as the skin type of the new components.</p>
+<h2 id="point"><a class="header" href="#point">Point</a></h2>
+<p><code>L-Click</code> on the map to create a new point.</p>
+<h2 id="line"><a class="header" href="#line">Line</a></h2>
+<p><code>L-Click</code> on the map to start a new line and add nodes to it. Hold <code>Ctrl</code> to snap to angle. <code>Shift+L-Click</code> to create control points for Bézier curves.</p>
+<p><code>Dbl-L-Click</code> to finish the line. Note that lines must have at least two nodes.</p>
+<p><code>R-Click</code> to undo a node or control point.</p>
+<h2 id="area"><a class="header" href="#area">Area</a></h2>
+<p>Generally the same as lines, with the following differences:</p>
+<ul>
+<li>The area will be automatically closed upon finishing</li>
+<li>Areas must have at least three nodes, or two if the second node is a Bézier curve.</li>
+</ul>
 <div style="break-before: page; page-break-before: always;"></div>
 <h1 id="nodes-mode"><a class="header" href="#nodes-mode">Nodes Mode</a></h1>
+<p>Not done</p>
 <div style="break-before: page; page-break-before: always;"></div>
 <h1 id="history"><a class="header" href="#history">History</a></h1>
+<h2 id="undo--redo"><a class="header" href="#undo--redo">Undo &amp; Redo</a></h2>
+<p><code>Ctrl+Z</code> to undo, <code>Ctrl+Shift+Z</code> to redo.</p>
+<h2 id="history-window"><a class="header" href="#history-window">History Window</a></h2>
+<p>The history window is located in a tab on the right side of the window by default. This shows the project’s history from when the project was opened.</p>
 <div style="break-before: page; page-break-before: always;"></div>
 <h1 id="project-management"><a class="header" href="#project-management">Project Management</a></h1>
+<p>The Project Editor is on the right side of the window by default.</p>
+<h2 id="namespace--component-list"><a class="header" href="#namespace--component-list">Namespace &amp; Component List</a></h2>
+<p>On top is a list of namespaces. You can toggle each namespace’s visibility (if the project is attached to a folder on disk) as well as delete namespaces if they are empty.</p>
+<p>Clicking on a namespace reveals a list of components within the namespace. Each component can be selected, moved into view or deleted.</p>
+<h2 id="skin-status"><a class="header" href="#skin-status">Skin Status</a></h2>
+<p>This shows the status of the skin loading. If an error is shown, click the <code>Reload</code> button under the <code>Skin</code> section.</p>
+<h2 id="configuration"><a class="header" href="#configuration">Configuration</a></h2>
+<p>This specifies the project configuration. More information can be found in the <a href="#project-toml">Project TOML</a> page.</p>
 <div style="break-before: page; page-break-before: always;"></div>
 <h1 id="loading--importing"><a class="header" href="#loading--importing">Loading &amp; Importing</a></h1>
+<h2 id="opening-project"><a class="header" href="#opening-project">Opening Project</a></h2>
+<p>Projects are stored in folders. Go to <code>File &gt; Open</code> or <code>Ctrl+O</code> to choose a folder to open. TODO check whether project.toml is necessary</p>
+<h2 id="reloading-namespaces"><a class="header" href="#reloading-namespaces">Reloading Namespaces</a></h2>
+<p><code>File &gt; Reload</code> or <code>Ctrl+R</code> to reload the project’s namespaces from disk. This may be useful if you have manually added namespaces or components to disk.</p>
+<h2 id="importing-namespaces"><a class="header" href="#importing-namespaces">Importing Namespaces</a></h2>
+<h3 id="from-pla3zip"><a class="header" href="#from-pla3zip">From pla3.zip</a></h3>
+<h3 id="from-pla2jsonpla2msgpack"><a class="header" href="#from-pla2jsonpla2msgpack">From pla2.json/pla2.msgpack</a></h3>
 <div style="break-before: page; page-break-before: always;"></div>
 <h1 id="saving--exporting"><a class="header" href="#saving--exporting">Saving &amp; Exporting</a></h1>
 <div style="break-before: page; page-break-before: always;"></div>
@@ -323,6 +436,8 @@ SigLevel = Optional TrustAll
 <h1 id="shortcut"><a class="header" href="#shortcut">Shortcut</a></h1>
 <div style="break-before: page; page-break-before: always;"></div>
 <h1 id="miscellaneous"><a class="header" href="#miscellaneous">Miscellaneous</a></h1>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="project-toml"><a class="header" href="#project-toml">Project TOML</a></h1>
 <div style="break-before: page; page-break-before: always;"></div>
 <h1 id="directories"><a class="header" href="#directories">Directories</a></h1>
 <div style="break-before: page; page-break-before: always;"></div>
@@ -400,7 +515,7 @@ SigLevel = Optional TrustAll
 </li>
 </ul>
 <h1 id="usage"><a class="header" href="#usage">Usage</a></h1>
-<p>See <a href="#layout-1">Basics</a> and <a href="#configuration">Advanced Topics</a></p>
+<p>See <a href="#layout-1">Basics</a> and <a href="#configuration-1">Advanced Topics</a></p>
 <h1 id="faq--troubleshooting-1"><a class="header" href="#faq--troubleshooting-1">FAQ &amp; Troubleshooting</a></h1>
 <ol>
 <li>Can I use Stencil2 for general purpose map annotating?
@@ -521,7 +636,7 @@ SigLevel = Optional TrustAll
 <li>Click <code>Delete</code> on the toolbar or <code>3</code> on the keyboard</li>
 <li>Left-click a component to delete it</li>
 </ul>
-<h2 id="undo--redo"><a class="header" href="#undo--redo">Undo &amp; Redo</a></h2>
+<h2 id="undo--redo-1"><a class="header" href="#undo--redo-1">Undo &amp; Redo</a></h2>
 <ul>
 <li>Click <code>Edit &gt; Undo</code> on the menu, <code>u</code> on the keyboard, or <code>Undo</code> under <code>History</code> on the right panel to undo</li>
 <li>Click <code>Edit &gt; Redo</code> on the menu, <code>y</code> on the keyboard, or <code>Redo</code> under <code>History</code> on the right panel to undo</li>
@@ -549,7 +664,7 @@ SigLevel = Optional TrustAll
 <li>Click <code>Stencil v(version) &gt; Quit</code> on the menu or <code>esc</code> on the keyboard to quit</li>
 </ul>
 <div style="break-before: page; page-break-before: always;"></div>
-<h1 id="configuration"><a class="header" href="#configuration">Configuration</a></h1>
+<h1 id="configuration-1"><a class="header" href="#configuration-1">Configuration</a></h1>
 <h2 id="tilemap-settings"><a class="header" href="#tilemap-settings">Tilemap settings</a></h2>
 <p>Under <code>Settings &gt; Tilemap</code>, you can set</p>
 <ul>

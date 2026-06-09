@@ -35,10 +35,10 @@
             const path_to_root = "";
             const default_light_theme = "light";
             const default_dark_theme = "navy";
-            window.path_to_searchindex_js = "searchindex-6f9487ed.js";
+            window.path_to_searchindex_js = "searchindex-ae80bcff.js";
         </script>
         <!-- Start loading toc.js asap -->
-        <script src="toc-3ca70670.js"></script>
+        <script src="toc-d64e41d2.js"></script>
     </head>
     <body>
     <div id="mdbook-help-container">
@@ -175,6 +175,35 @@
                 <div id="mdbook-content" class="content">
                     <main>
                         <h1 id="component-editing"><a class="header" href="#component-editing">Component Editing</a></h1>
+<p>The Component Editor is on the left of the window by default.</p>
+<p>When no components are selected, it shows the number of components in your clipboard.</p>
+<h2 id="information"><a class="header" href="#information">Information</a></h2>
+<p>Below is the information that will be shown. Note that some fields are only editable when only one component is selected, or if all values are the same.</p>
+<ul>
+<li>The namespace the components are under. To create new namespaces, see the <a href="Project-Editor.html">Project Editor</a>.</li>
+<li>The ID of the components. This is typically randomly-generated and not editable.</li>
+<li>The display name of the components. This will show on the rendered map.</li>
+<li>The layer of the components.</li>
+<li>The skin type of the components.</li>
+<li>A list of attributes. This will be serialised into TOML inside the PLA3 file.
+<ul>
+<li>The Description and Tags fields from PLA2 show up here. Description can be stored as a string in the top level. Each tag can be stored as a True boolean in the top level.
+<ul>
+<li>For example, the <code>oneWay</code> tag from PLA2 shows up as <code>oneWay = true</code> in the attributes table of PLA3.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>The list of nodes the component has. This shows both ending coordinate and Bézier control points.
+<ul>
+<li>A simple line to a coordinate shows a simple <code>coord</code> entry.</li>
+<li>A quadratic curve shows <code>ctrl</code> and <code>coord</code>.</li>
+<li>A cubic curve shows <code>ctrl1</code>, <code>ctrl2</code> and <code>coord</code>.</li>
+<li>Labels are also shown. This is a future feature to prevent components with nodes on the same coordinate from joining together, and is useful for roads at different levels. Functionality to edit the label will be implemented in the future.</li>
+<li>If the component is a line, there is also a button to reverse the node order.</li>
+</ul>
+</li>
+</ul>
 
                     </main>
 

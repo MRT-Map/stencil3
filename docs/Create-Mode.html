@@ -35,10 +35,10 @@
             const path_to_root = "";
             const default_light_theme = "light";
             const default_dark_theme = "navy";
-            window.path_to_searchindex_js = "searchindex-6f9487ed.js";
+            window.path_to_searchindex_js = "searchindex-ae80bcff.js";
         </script>
         <!-- Start loading toc.js asap -->
-        <script src="toc-3ca70670.js"></script>
+        <script src="toc-d64e41d2.js"></script>
     </head>
     <body>
     <div id="mdbook-help-container">
@@ -175,6 +175,20 @@
                 <div id="mdbook-content" class="content">
                     <main>
                         <h1 id="create-mode"><a class="header" href="#create-mode">Create Mode</a></h1>
+<p>The Create Modes allow creating of components.</p>
+<p>Before creating any components, you will need to select a namespace to create components under as well as the skin type of the new components.</p>
+<h2 id="point"><a class="header" href="#point">Point</a></h2>
+<p><code>L-Click</code> on the map to create a new point.</p>
+<h2 id="line"><a class="header" href="#line">Line</a></h2>
+<p><code>L-Click</code> on the map to start a new line and add nodes to it. Hold <code>Ctrl</code> to snap to angle. <code>Shift+L-Click</code> to create control points for Bézier curves.</p>
+<p><code>Dbl-L-Click</code> to finish the line. Note that lines must have at least two nodes.</p>
+<p><code>R-Click</code> to undo a node or control point.</p>
+<h2 id="area"><a class="header" href="#area">Area</a></h2>
+<p>Generally the same as lines, with the following differences:</p>
+<ul>
+<li>The area will be automatically closed upon finishing</li>
+<li>Areas must have at least three nodes, or two if the second node is a Bézier curve.</li>
+</ul>
 
                     </main>
 
