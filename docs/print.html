@@ -36,10 +36,10 @@
             const path_to_root = "";
             const default_light_theme = "light";
             const default_dark_theme = "navy";
-            window.path_to_searchindex_js = "searchindex-ae80bcff.js";
+            window.path_to_searchindex_js = "searchindex-82b9fa2b.js";
         </script>
         <!-- Start loading toc.js asap -->
-        <script src="toc-d64e41d2.js"></script>
+        <script src="toc-6cbda905.js"></script>
     </head>
     <body>
     <div id="mdbook-help-container">
@@ -345,6 +345,8 @@ SigLevel = Optional TrustAll
 <p>After selecting, the <a href="Component-Editor.html">Component Editor</a> will show information about the selected components.</p>
 <h3 id="marquee-select"><a class="header" href="#marquee-select">Marquee Select</a></h3>
 <p><code>L-Click</code>ing and dragging will show a dashed box. When the mouse is released, any components fully within this box will be selected. You can also <code>Shift+L-Click</code> and drag to add to the existing selection.</p>
+<h2 id="moving"><a class="header" href="#moving">Moving</a></h2>
+<p>To move a component, hold <code>Ctrl</code> and drag the component.</p>
 <h2 id="clipboard"><a class="header" href="#clipboard">Clipboard</a></h2>
 <p><code>Ctrl+C</code> to copy and <code>Ctrl+X</code> to cut the selected components, and <code>Ctrl+V</code> to paste them. Note that components will be pasted into the namespace where the last component was created in.</p>
 <h2 id="deleting"><a class="header" href="#deleting">Deleting</a></h2>
@@ -424,10 +426,26 @@ SigLevel = Optional TrustAll
 <h2 id="reloading-namespaces"><a class="header" href="#reloading-namespaces">Reloading Namespaces</a></h2>
 <p><code>File &gt; Reload</code> or <code>Ctrl+R</code> to reload the project’s namespaces from disk. This may be useful if you have manually added namespaces or components to disk.</p>
 <h2 id="importing-namespaces"><a class="header" href="#importing-namespaces">Importing Namespaces</a></h2>
-<h3 id="from-pla3zip"><a class="header" href="#from-pla3zip">From pla3.zip</a></h3>
-<h3 id="from-pla2jsonpla2msgpack"><a class="header" href="#from-pla2jsonpla2msgpack">From pla2.json/pla2.msgpack</a></h3>
+<p>Go to <code>File &gt; Import Namespaces</code>. After selecting one of the options and choosing the files to load, the components inside the file will be imported into your project.</p>
+<p>Namespaces will be created if they were not yet created in your project. Warnings will also be returned if duplicate IDs exist in the file, or when a component of the same ID already exists in the project.</p>
+<p>Currently supported formats are <code>pla3.zip</code>, <code>pla2.msgpack</code> and <code>pla2.json</code>.</p>
 <div style="break-before: page; page-break-before: always;"></div>
 <h1 id="saving--exporting"><a class="header" href="#saving--exporting">Saving &amp; Exporting</a></h1>
+<h2 id="saving-project"><a class="header" href="#saving-project">Saving Project</a></h2>
+<p>If the project is already attached to a folder on disk, going to <code>File &gt; Save</code> or <code>Ctrl+S</code> will save the project to disk. To save the current project to another folder, go to <code>File &gt; Save As</code> or <code>Ctrl+Shift+S</code>.</p>
+<p>If the project is currently not saved to a folder on disk, <code>File &gt; Save</code> and <code>Ctrl+S</code> will work the same as <code>File &gt; Save As</code> and <code>Ctrl+Shift+S</code> and will prompt for a folder to save the project to.</p>
+<h2 id="exporting-namespaces"><a class="header" href="#exporting-namespaces">Exporting Namespaces</a></h2>
+<p>Go to <code>File &gt; Export Namespaces</code> and select the namespaces you want to export. You will then be prompted one by one for the path to save the files to.</p>
+<h3 id="to-pla3zip"><a class="header" href="#to-pla3zip">To pla3.zip</a></h3>
+<p>A pla3.zip file consists of multiple pla3 files under the same namespace. It is similar to a namespace folder of pla3 files, just that it is conveniently compressed into one file for easy transport.</p>
+<h3 id="to-pla2jsonpla2msgpack"><a class="header" href="#to-pla2jsonpla2msgpack">To pla2.json/pla2.msgpack</a></h3>
+<p>The older pla2 format stores all components of the same namespace in one file, and is generally in MessagePack format (although JSON is fully supported too).</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="project-toml"><a class="header" href="#project-toml">Project TOML</a></h1>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="directories"><a class="header" href="#directories">Directories</a></h1>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="environment-variables"><a class="header" href="#environment-variables">Environment Variables</a></h1>
 <div style="break-before: page; page-break-before: always;"></div>
 <h1 id="map"><a class="header" href="#map">Map</a></h1>
 <div style="break-before: page; page-break-before: always;"></div>
@@ -436,12 +454,6 @@ SigLevel = Optional TrustAll
 <h1 id="shortcut"><a class="header" href="#shortcut">Shortcut</a></h1>
 <div style="break-before: page; page-break-before: always;"></div>
 <h1 id="miscellaneous"><a class="header" href="#miscellaneous">Miscellaneous</a></h1>
-<div style="break-before: page; page-break-before: always;"></div>
-<h1 id="project-toml"><a class="header" href="#project-toml">Project TOML</a></h1>
-<div style="break-before: page; page-break-before: always;"></div>
-<h1 id="directories"><a class="header" href="#directories">Directories</a></h1>
-<div style="break-before: page; page-break-before: always;"></div>
-<h1 id="environment-variables"><a class="header" href="#environment-variables">Environment Variables</a></h1>
 <div style="break-before: page; page-break-before: always;"></div>
 <h1 id="welcome-to-stencil2s-manual"><a class="header" href="#welcome-to-stencil2s-manual">Welcome to Stencil2’s manual!</a></h1>
 <p><em>Last updated for: v2.2.0</em></p>
